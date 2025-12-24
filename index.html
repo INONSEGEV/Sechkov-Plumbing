@@ -80,8 +80,22 @@
         }
 
         .content {
-            padding: 45px 40px;
+            padding: 45px 40px 35px;
             background: #f8f9fa;
+        }
+
+        .intro-text {
+            text-align: center;
+            color: #4a5568;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            padding: 0 10px;
+        }
+
+        .intro-text strong {
+            color: #2a5298;
+            font-weight: 600;
         }
 
         .section-title {
@@ -107,7 +121,7 @@
 
         .services {
             list-style: none;
-            margin-bottom: 0;
+            margin-bottom: 35px;
         }
 
         .service-item {
@@ -210,9 +224,57 @@
             border-color: rgba(255, 255, 255, 0.5);
         }
 
-        .copy-button.copied {
-            background: #4caf50;
-            border-color: #4caf50;
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #2a5298;
+        }
+
+        .feature-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .guarantee-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+        }
+
+        .guarantee-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .guarantee-text {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.95;
         }
 
         @media (max-width: 480px) {
@@ -251,26 +313,62 @@
                     <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
                 </svg>
             </div>
-            <div class="company-name">סצ'יקוב</div>
-            <div class="subtitle">שירותי אינסטלציה מקצועיים</div>
+            <div class="company-name">סצ'קוב</div>
+            <div class="subtitle">שירותי אינסטלציה מקצועיים ואמינים</div>
         </div>
 
         <div class="content">
-            <div class="section-title">כל עבודות האינסטלציה</div>
+            <div class="intro-text">
+                אנחנו מספקים <strong>פתרונות אינסטלציה מקצועיים</strong> לבתים ועסקים באזור המרכז. 
+                עם <strong>ניסיון רב שנים</strong> בתחום, אנו מתחייבים לשירות מהיר, יעיל ואמין.
+            </div>
+
+            <div class="section-title">השירותים שלנו</div>
             
             <ul class="services">
-                <li class="service-item">פתיחת סתימות</li>
-                <li class="service-item">החלפת כלים סניטריים</li>
+                <li class="service-item">פתיחת סתימות במערכות ביוב וניקוז</li>
+                <li class="service-item">החלפה ותיקון כלים סניטריים</li>
                 <li class="service-item">החלפת קווי מים וביוב</li>
-                <li class="service-item">תיקוני פיצוצים</li>
-                <li class="service-item">החלפה והתקנת דודי חימום</li>
+                <li class="service-item">תיקוני פיצוצים ונזילות דחופים</li>
+                <li class="service-item">התקנה והחלפת דודי חימום</li>
             </ul>
+
+            <div class="features">
+                <div class="feature-box">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">שירות מהיר</div>
+                    <div class="feature-desc">זמינות גבוהה וטיפול מיידי בתקלות</div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-title">אחריות מלאה</div>
+                    <div class="feature-desc">אחריות על כל העבודות והחלקים</div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-title">מחירים הוגנים</div>
+                    <div class="feature-desc">ללא עלויות סמויות</div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">⭐</div>
+                    <div class="feature-title">ניסיון מוכח</div>
+                    <div class="feature-desc">עשרות לקוחות מרוצים</div>
+                </div>
+            </div>
+
+            <div class="guarantee-box">
+                <div class="guarantee-title">💎 התחייבות לאיכות</div>
+                <div class="guarantee-text">
+                    אנו משתמשים אך ורק בחומרים איכותיים ומקוריים, 
+                    ומתחייבים לעבודה מקצועית ומדויקת בכל פרויקט
+                </div>
+            </div>
         </div>
 
         <div class="cta-section">
-            <div class="cta-text">לפרטים נוספים</div>
+            <div class="cta-text">זקוקים לשירות אינסטלציה? צרו קשר עכשיו</div>
             <div class="contact-info">
-                <div class="contact-name">איתמר</div>
+                <div class="contact-name">איתמר סצ'קוב</div>
                 <div class="phone-container">
                     <a href="tel:0546186015" class="phone-button">0546186015</a>
                     <button class="copy-button" onclick="copyPhone()">העתק</button>
