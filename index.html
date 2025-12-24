@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סצ'יקוב - שירותי אינסטלציה מקצועיים</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Heebo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            max-width: 480px;
+            width: 100%;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .header {
+            background: linear-gradient(165deg, #1e3c72 0%, #2a5298 100%);
+            padding: 60px 40px 50px;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+        .logo-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .company-name {
+            font-size: 44px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.85);
+            text-align: center;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .content {
+            padding: 45px 40px;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 50px;
+            height: 3px;
+            background: #2a5298;
+        }
+
+        .services {
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        .service-item {
+            background: white;
+            padding: 20px 25px;
+            margin-bottom: 12px;
+            border-right: 4px solid #2a5298;
+            font-size: 17px;
+            color: #2c3e50;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .service-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transform: translateX(-3px);
+        }
+
+        .service-item::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #2a5298;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+
+        .cta-section {
+            background: #1a1a2e;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .cta-text {
+            color: rgba(255,255,255,0.9);
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            letter-spacing: 0.3px;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .contact-name {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .phone-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .phone-button {
+            background: white;
+            color: #1a1a2e;
+            padding: 18px 45px;
+            text-decoration: none;
+            font-size: 26px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            direction: ltr;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .phone-button:hover {
+            background: #2a5298;
+            color: white;
+        }
+
+        .copy-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 18px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .copy-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .copy-button.copied {
+            background: #4caf50;
+            border-color: #4caf50;
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 50px 30px 40px;
+            }
+            .content {
+                padding: 35px 30px;
+            }
+            .company-name {
+                font-size: 38px;
+            }
+            .service-item {
+                font-size: 16px;
+                padding: 18px 20px;
+            }
+            .phone-button {
+                font-size: 22px;
+                padding: 16px 35px;
+            }
+            .copy-button {
+                padding: 16px 18px;
+                font-size: 14px;
+            }
+            .cta-section {
+                padding: 35px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                </svg>
+            </div>
+            <div class="company-name">סצ'יקוב</div>
+            <div class="subtitle">שירותי אינסטלציה מקצועיים</div>
+        </div>
+
+        <div class="content">
+            <div class="section-title">כל עבודות האינסטלציה</div>
+            
+            <ul class="services">
+                <li class="service-item">פתיחת סתימות</li>
+                <li class="service-item">החלפת כלים סניטריים</li>
+                <li class="service-item">החלפת קווי מים וביוב</li>
+                <li class="service-item">תיקוני פיצוצים</li>
+                <li class="service-item">החלפה והתקנת דודי חימום</li>
+            </ul>
+        </div>
+
+        <div class="cta-section">
+            <div class="cta-text">לפרטים נוספים</div>
+            <div class="contact-info">
+                <div class="contact-name">איתמר</div>
+                <div class="phone-container">
+                    <a href="tel:0546186015" class="phone-button">0546186015</a>
+                    <button class="copy-button" onclick="copyPhone()">העתק</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyPhone() {
+            const phoneNumber = '0546186015';
+            navigator.clipboard.writeText(phoneNumber).then(() => {
+                const button = document.querySelector('.copy-button');
+                const originalText = button.textContent;
+                button.textContent = 'הועתק!';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
