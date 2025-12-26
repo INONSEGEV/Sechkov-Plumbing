@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>סצ'קוב - שירותי אינסטלציה מקצועיים</title>
 
   <style>
@@ -31,18 +31,15 @@
       overflow: hidden;
     }
 
-    /* ===== HEADER WITH IMGUR EMBED ===== */
+    /* ===== HEADER WITH IMGUR ALBUM ===== */
     .header {
       position: relative;
       width: 100%;
-      aspect-ratio: 1 / 1; /* ריבוע מושלם */
+      aspect-ratio: 1 / 1;
       background: #000;
-      overflow: hidden;
     }
 
     .header iframe {
-      position: absolute;
-      inset: 0;
       width: 100%;
       height: 100%;
       border: none;
@@ -59,6 +56,11 @@
       font-size: 16px;
       line-height: 1.8;
       margin-bottom: 35px;
+    }
+
+    .intro-text strong {
+      color: #2a5298;
+      font-weight: 600;
     }
 
     .section-title {
@@ -94,7 +96,20 @@
       border-right: 4px solid #2a5298;
       border-radius: 12px;
       font-size: 17px;
+      color: #2c3e50;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .service-item::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #2a5298;
+      border-radius: 50%;
+      margin-left: 15px;
     }
 
     .cta-section {
@@ -103,16 +118,22 @@
       text-align: center;
     }
 
+    .cta-text {
+      color: rgba(255,255,255,0.9);
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
     .phone-button {
       background: white;
       color: #1a1a2e;
       padding: 18px 45px;
-      text-decoration: none;
       font-size: 26px;
       font-weight: 700;
+      text-decoration: none;
       border-radius: 12px;
-      display: inline-block;
       direction: ltr;
+      display: inline-block;
     }
   </style>
 </head>
@@ -120,32 +141,35 @@
 <body>
   <div class="container">
 
-    <!-- HEADER IMGUR EMBED -->
+    <!-- HEADER IMAGE (IMGUR ALBUM EMBED) -->
     <div class="header">
       <iframe
         src="https://imgur.com/a/1zRlcvR/embed"
-        loading="lazy"
-        allowfullscreen>
+        allowfullscreen
+        loading="lazy">
       </iframe>
     </div>
 
     <div class="content">
       <div class="intro-text">
-        פתרונות אינסטלציה מקצועיים לבתים ועסקים באזור המרכז
+        אנחנו מספקים <strong>פתרונות אינסטלציה מקצועיים</strong> לבתים ועסקים באזור המרכז.
+        עם <strong>ניסיון רב שנים</strong> בתחום, אנו מתחייבים לשירות מהיר, יעיל ואמין.
       </div>
 
       <div class="section-title">השירותים שלנו</div>
 
       <ul class="services">
-        <li class="service-item">פתיחת סתימות</li>
-        <li class="service-item">תיקוני נזילות</li>
-        <li class="service-item">החלפת קווי מים</li>
-        <li class="service-item">דודי חימום</li>
+        <li class="service-item">פתיחת סתימות במערכות ביוב וניקוז</li>
+        <li class="service-item">החלפה ותיקון כלים סניטריים</li>
+        <li class="service-item">החלפת קווי מים וביוב</li>
+        <li class="service-item">תיקוני פיצוצים ונזילות דחופים</li>
+        <li class="service-item">התקנה והחלפת דודי חימום</li>
       </ul>
     </div>
 
     <div class="cta-section">
-      <a class="phone-button" href="tel:0546186015">054-618-6015</a>
+      <div class="cta-text">זקוקים לשירות אינסטלציה? צרו קשר עכשיו</div>
+      <a href="tel:0546186015" class="phone-button">054-618-6015</a>
     </div>
 
   </div>
