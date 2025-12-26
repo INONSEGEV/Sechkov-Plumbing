@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>סצ'קוב - שירותי אינסטלציה מקצועיים</title>
 
   <style>
@@ -31,35 +31,21 @@
       overflow: hidden;
     }
 
-    /* ===== HEADER AS IMAGE (SQUARE) ===== */
+    /* ===== HEADER WITH IMGUR EMBED ===== */
     .header {
       position: relative;
       width: 100%;
       aspect-ratio: 1 / 1; /* ריבוע מושלם */
-      background-image: url('header-image.jpg'); /* החלף לקישור ישיר או לקובץ מקומי */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background: #000;
+      overflow: hidden;
     }
 
-    /* אם תרצה שכבת כהות עדינה מעל התמונה (לשפר נראות) השאר פעיל. */
-    .header::before {
-      content: '';
+    .header iframe {
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.12);
-    }
-
-    /* קו עדין תחתון כמו שהיה */
-    .header::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      z-index: 2;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
 
     .content {
@@ -73,12 +59,6 @@
       font-size: 16px;
       line-height: 1.8;
       margin-bottom: 35px;
-      padding: 0 10px;
-    }
-
-    .intro-text strong {
-      color: #2a5298;
-      font-weight: 600;
     }
 
     .section-title {
@@ -114,65 +94,13 @@
       border-right: 4px solid #2a5298;
       border-radius: 12px;
       font-size: 17px;
-      color: #2c3e50;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      transition: all 0.2s ease;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .service-item:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      transform: translateX(-3px);
-    }
-
-    .service-item::before {
-      content: '';
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      background: #2a5298;
-      border-radius: 50%;
-      margin-left: 15px;
-      flex-shrink: 0;
     }
 
     .cta-section {
       background: #1a1a2e;
       padding: 40px;
       text-align: center;
-    }
-
-    .cta-text {
-      color: rgba(255,255,255,0.9);
-      font-size: 18px;
-      font-weight: 500;
-      margin-bottom: 25px;
-      letter-spacing: 0.3px;
-    }
-
-    .contact-info {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 25px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      margin-bottom: 20px;
-    }
-
-    .contact-name {
-      color: rgba(255,255,255,0.7);
-      font-size: 14px;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .phone-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
     }
 
     .phone-button {
@@ -182,110 +110,9 @@
       text-decoration: none;
       font-size: 26px;
       font-weight: 700;
-      transition: all 0.3s ease;
+      border-radius: 12px;
+      display: inline-block;
       direction: ltr;
-      letter-spacing: 1px;
-      border: none;
-      cursor: pointer;
-      border-radius: 12px;
-    }
-
-    .phone-button:hover {
-      background: #2a5298;
-      color: white;
-    }
-
-    .copy-button {
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 18px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 600;
-      border-radius: 12px;
-    }
-
-    .copy-button:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.5);
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .feature-box {
-      background: white;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      border-radius: 15px;
-    }
-
-    .feature-icon {
-      font-size: 32px;
-      margin-bottom: 10px;
-      color: #2a5298;
-    }
-
-    .feature-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 5px;
-    }
-
-    .feature-desc {
-      font-size: 13px;
-      color: #64748b;
-      line-height: 1.5;
-    }
-
-    .guarantee-box {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      padding: 25px;
-      text-align: center;
-      margin-top: 30px;
-      color: white;
-      border-radius: 15px;
-    }
-
-    .guarantee-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .guarantee-text {
-      font-size: 14px;
-      line-height: 1.6;
-      opacity: 0.95;
-    }
-
-    @media (max-width: 480px) {
-      .content {
-        padding: 35px 30px;
-      }
-      .service-item {
-        font-size: 16px;
-        padding: 18px 20px;
-      }
-      .phone-button {
-        font-size: 22px;
-        padding: 16px 35px;
-      }
-      .copy-button {
-        padding: 16px 18px;
-        font-size: 14px;
-      }
-      .cta-section {
-        padding: 35px 25px;
-      }
     }
   </style>
 </head>
@@ -293,100 +120,34 @@
 <body>
   <div class="container">
 
-    <!-- HEADER IMAGE (square) -->
-    <div class="header"></div>
+    <!-- HEADER IMGUR EMBED -->
+    <div class="header">
+      <iframe
+        src="https://imgur.com/a/1zRlcvR/embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
 
     <div class="content">
       <div class="intro-text">
-        אנחנו מספקים <strong>פתרונות אינסטלציה מקצועיים</strong> לבתים ועסקים באזור המרכז.
-        עם <strong>ניסיון רב שנים</strong> בתחום, אנו מתחייבים לשירות מהיר, יעיל ואמין.
+        פתרונות אינסטלציה מקצועיים לבתים ועסקים באזור המרכז
       </div>
 
       <div class="section-title">השירותים שלנו</div>
 
       <ul class="services">
-        <li class="service-item">פתיחת סתימות במערכות ביוב וניקוז</li>
-        <li class="service-item">החלפה ותיקון כלים סניטריים</li>
-        <li class="service-item">החלפת קווי מים וביוב</li>
-        <li class="service-item">תיקוני פיצוצים ונזילות דחופים</li>
-        <li class="service-item">התקנה והחלפת דודי חימום</li>
+        <li class="service-item">פתיחת סתימות</li>
+        <li class="service-item">תיקוני נזילות</li>
+        <li class="service-item">החלפת קווי מים</li>
+        <li class="service-item">דודי חימום</li>
       </ul>
-
-      <div class="features">
-        <div class="feature-box">
-          <div class="feature-icon">⚡</div>
-          <div class="feature-title">שירות מהיר</div>
-          <div class="feature-desc">זמינות גבוהה וטיפול מיידי בתקלות</div>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">🛡️</div>
-          <div class="feature-title">אחריות מלאה</div>
-          <div class="feature-desc">אחריות על כל העבודות והחלקים</div>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">💰</div>
-          <div class="feature-title">מחירים הוגנים</div>
-          <div class="feature-desc">ללא עלויות סמויות</div>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">⭐</div>
-          <div class="feature-title">ניסיון מוכח</div>
-          <div class="feature-desc">עשרות לקוחות מרוצים</div>
-        </div>
-      </div>
-
-      <div class="guarantee-box">
-        <div class="guarantee-title">💎 התחייבות לאיכות</div>
-        <div class="guarantee-text">
-          אנו משתמשים אך ורק בחומרים איכותיים ומקוריים,
-          ומתחייבים לעבודה מקצועית ומדויקת בכל פרויקט
-        </div>
-      </div>
     </div>
 
     <div class="cta-section">
-      <div class="cta-text">זקוקים לשירות אינסטלציה? צרו קשר עכשיו</div>
-      <div class="contact-info">
-        <div class="contact-name">איתמר סצ'קוב</div>
-        <div class="phone-container">
-          <a href="tel:0546186015" class="phone-button">0546186015</a>
-          <button class="copy-button" onclick="copyPhone()">העתק</button>
-        </div>
-      </div>
+      <a class="phone-button" href="tel:0546186015">054-618-6015</a>
     </div>
 
   </div>
-
-  <script>
-    function copyPhone() {
-      const phoneNumber = '0546186015';
-
-      if (!navigator.clipboard || !navigator.clipboard.writeText) {
-        // fallback בסיסי לדפדפנים ישנים
-        const tempInput = document.createElement('input');
-        tempInput.value = phoneNumber;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
-        showCopied();
-        return;
-      }
-
-      navigator.clipboard.writeText(phoneNumber).then(showCopied);
-    }
-
-    function showCopied() {
-      const button = document.querySelector('.copy-button');
-      const originalText = button.textContent;
-      button.textContent = 'הועתק!';
-      button.classList.add('copied');
-
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.classList.remove('copied');
-      }, 2000);
-    }
-  </script>
 </body>
 </html>
